@@ -125,7 +125,7 @@ const Auth = () => {
     const signupHandle = async () => {
         const res = await authApi.signup({email:signupForm.email, username:signupForm.username, password:signupForm.password});
         if(res.message === "success"){
-            window.location.reload();
+            // window.location.reload();
         }else{
             setSignupForm({...signupForm, annouce:res.message});
         }
