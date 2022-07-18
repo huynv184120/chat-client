@@ -25,4 +25,6 @@ axiosClient.interceptors.response.use((response) => {
 }, (error) => {
     throw error;
 });
+
+axiosClient.defaults.withCredentials = true
 export default axiosClient;
