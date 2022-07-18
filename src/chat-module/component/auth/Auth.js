@@ -116,7 +116,7 @@ const Auth = () => {
         const res = await authApi.login({email:loginForm.email, password: loginForm.password});
         console.log(res.message)
         if(res.message === "success"){
-            window.location.reload();
+            // window.location.reload();
         }else{
             setLoginForm({...loginForm,annouce:res.message});
         }
@@ -125,7 +125,7 @@ const Auth = () => {
     const signupHandle = async () => {
         const res = await authApi.signup({email:signupForm.email, username:signupForm.username, password:signupForm.password});
         if(res.message === "success"){
-            // window.location.reload();
+            window.location.reload();
         }else{
             setSignupForm({...signupForm, annouce:res.message});
         }
