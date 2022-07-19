@@ -23,6 +23,7 @@ const ListMessages = ({socket}) => {
     const bottom = useRef(null);
     const classes = useStyles();
     const listMessages = useSelector(state => state.message.listMessages)
+    console.log(listMessages)
     const currentRoom = useSelector(state => state.room.currentRoom);
     const currentRoomMess = (listMessages.filter((oj) => oj.room_id === currentRoom))[0]?.messages || [];
     const users = useSelector(state => state.user.listUsers);
