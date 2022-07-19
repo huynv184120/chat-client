@@ -27,7 +27,7 @@ const ListMessages = ({socket}) => {
     const currentRoom = useSelector(state => state.room.currentRoom);
     const currentRoomMess = (listMessages.filter((oj) => oj.room_id === currentRoom))[0]?.messages || [];
     const users = useSelector(state => state.user.listUsers);
-    const self = Cookies.get('user_id').split('"')[1];
+    const self = Cookies.get('user_id');
     mess_count.current = currentRoomMess.length;
     for (let i = currentRoomMess.length - 1; i > 0; i=i-1) {
         if ((currentRoomMess[i].from !== self)) {
