@@ -119,6 +119,7 @@ const Auth = () => {
         if(res.message === "success"){
             Cookies.set('token', res.token);
             Cookies.set('user_id' ,res.user_id);
+            console.log(res)
             window.location.reload();
         }else{
             setLoginForm({...loginForm,annouce:res.message});
