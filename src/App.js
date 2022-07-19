@@ -41,7 +41,7 @@ const useStyles = makeStyles(() => {
   })
 })
 
-const socket = io(config.END_POINT, { withCredentials: true });
+const socket = io(config.REACT_SOCKET_END_POINT, { withCredentials: true });
 
 const App = () => {
   const classes = useStyles();
