@@ -9,6 +9,7 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import CodeIcon from '@material-ui/icons/Code';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { authApi } from '../../api';
+import Cookies from 'js-cookie';
 
 const useStyles = makeStyles(() => ({
     authen: {
@@ -116,6 +117,8 @@ const Auth = () => {
         const res = await authApi.login({email:loginForm.email, password: loginForm.password});
         console.log(res.message)
         if(res.message === "success"){
+            Cookies.set('token', res.token);
+            Cookies.set('user_id' ,res.user_id);
             window.location.reload();
         }else{
             setLoginForm({...loginForm,annouce:res.message});
