@@ -120,7 +120,7 @@ const Auth = () => {
             Cookies.set('token', res.token);
             Cookies.set('user_id' ,res.user_id);
             console.log(res)
-            // window.location.reload();
+            window.location.reload();
         }else{
             setLoginForm({...loginForm,annouce:res.message});
         }
