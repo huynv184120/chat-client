@@ -141,12 +141,12 @@ const Auth = () => {
 
 
     return (
-        <div style={{backgroundImage:"url(https://i.pinimg.com/564x/8d/12/8d/8d128d89ab8baf0c70defe825281825f.jpg)",backgroundSize:"100vw 105vh", width:"100vw", height:"100vh"}}>
+        <div>
             <div className={classes.authen}>
                 {login &&
                     <form autoComplete='off'>
                         <div className={classes.loginForm} onKeyDown={(e) => { if (e.key == 'Enter') loginHandle(); }}>
-                            <h1>Login</h1>
+                            <h1>Matching App</h1>
                             <p style={{color:"red"}}>{loginForm.annouce}</p>
                             <TextField
                                 required
@@ -187,7 +187,7 @@ const Auth = () => {
                                 login
                             </Button>
 
-                            <p>
+                            {/* <p>
                                 <a onClick={() => { setLogin(false); setSignup(true) }} style={{cursor:"pointer"}}>
                                     <u>sign up</u>
                                 </a>
@@ -195,7 +195,7 @@ const Auth = () => {
                                 <a onClick={() => { setLogin(false); setVerify(true) }}>
                                     verify
                                 </a> */}
-                            </p>
+                            {/* </p> */}
                         </div>
                     </form>}
 
